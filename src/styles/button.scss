@@ -19,6 +19,21 @@
     margin-right: 16px;
   }
 
+  &.outlined {
+    background: #f8f8f8;
+    color: #835afd;
+
+    border: 1px solid #835afd;
+  }
+
+  &.outlined:not(:disabled):hover {
+    background: #835afd;
+    color: white;
+    filter: brightness(1);
+
+    transition: 0.2s;
+  }
+
   &:not(:disabled):hover {
     filter: brightness(0.9);
   }
