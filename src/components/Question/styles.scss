@@ -1,0 +1,87 @@
+.question {
+  background: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+
+  & + .question {
+    margin-top: 8px;
+  }
+
+  p {
+    color: #29292e;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      > img {
+        max-height: 32px;
+        border-radius: 50%;
+      }
+
+      > span {
+        font-size: 14px;
+        line-height: 16px;
+        color: #737380;
+      }
+    }
+
+    .interactive > img {
+      cursor: pointer;
+    }
+
+    button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &.like-button {
+        display: flex;
+        align-items: flex-end;
+        color: #737380;
+        gap: 8px;
+
+        &.liked {
+          color: #835afd;
+
+          svg path {
+            stroke: #835afd;
+          }
+        }
+
+        &:hover {
+          filter: brightness(0.7);
+        }
+      }
+    }
+
+    .interaction {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      button {
+        &:hover {
+          svg path {
+            stroke: #835afd;
+            transition: stroke 0.2s;
+          }
+          svg circle {
+            stroke: #835afd;
+            transition: stroke 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
