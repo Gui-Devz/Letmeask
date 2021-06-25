@@ -8,6 +8,42 @@
     margin-top: 8px;
   }
 
+  &.highlighted {
+    background: #f4f0ff;
+    border: 1px solid #835afd;
+
+    .highlighted-button {
+      svg path {
+        stroke: #835afd;
+        transition: stroke 0.2s;
+      }
+    }
+
+    footer {
+      .user-info,
+      .user-info span {
+        color: #29292e;
+      }
+    }
+  }
+
+  &.answered {
+    background: #dbdcdd;
+    border: none;
+
+    .answered-button {
+      svg path {
+        stroke: #835afd;
+        transition: stroke 0.2s;
+      }
+
+      svg circle {
+        stroke: #835afd;
+        transition: stroke 0.2s;
+      }
+    }
+  }
+
   p {
     color: #29292e;
   }
@@ -78,6 +114,15 @@
           }
           svg circle {
             stroke: #835afd;
+            transition: stroke 0.2s;
+          }
+        }
+      }
+
+      .delete-button {
+        &:hover {
+          svg path {
+            stroke: #e73f5d;
             transition: stroke 0.2s;
           }
         }
