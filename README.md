@@ -1,46 +1,105 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src="https://user-images.githubusercontent.com/62578862/123459953-56661d00-d5bd-11eb-8049-58d8e1331d5c.png" width="250px" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center"> 
+	:heavy_check_mark:  NextLevelWeek 🚀 Done! :heavy_check_mark:
+</h4>
+<p align="center">	
+<a href="https://www.codacy.com/manual/DanielObara/NLW-1.0?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DanielObara/NLW-1.0&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/43a25c77fd4a4101a4ecc0d3df303a1e"/></a>
+	
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Gui-Devz/Letmeask">
+	
+  <a href="https://www.linkedin.com/in/guilherme-batalha-2b913448/">
+    <img alt="Made by GuilhermeZagari" src="https://img.shields.io/badge/made%20by-GuilhermeZagari-%2304D361">
+  </a>
+  <a href="https://rocketseat.com.br/">
+  <img src="https://img.shields.io/badge/NLW-done-brightgreen?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEVHcExxWsF0XMJzXMJxWcFsUsD///9jRrzY0u6Xh9Gsn9n39fyMecy0qd2bjNJWBT0WAAAABHRSTlMA2Do606wF2QAAAGlJREFUGJVdj1cWwCAIBLEsRU3uf9xobDH8+GZwUYi8i6ucJwrxKE+7D0G9Q4vlYqtmCSjndr4CgCgzlyFgfKfKCVO0LrPKjmiqMxGXkJwNnXskqWG+1oSM+BSwD8f29YLNjvx/OQrn+g99oQSoNmt3PgAAAABJRU5ErkJggg=="></img>
+  </a>
 
-## Available Scripts
+  <a href="https://github.com/Gui-Devz/Letmeask/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Gui-Devz/Letmeask">
+  </a>
 
-In the project directory, you can run:
+   <a href="https://github.com/Gui-Devz/Letmeask/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Gui-Devz/Letmeask?style=social">
+  </a>
+</p>
 
-### `yarn start`
+<p align="center">
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💻 Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Letmeask is a project developed based on how forums works, but it's focused in League of Legends game.
+So using this app you'll be able to connect with people asking them all your
+doubts about the game.
 
-### `yarn test`
+<h1 align="center">
+    <img alt="Example" title="Example" src="https://user-images.githubusercontent.com/62578862/123459316-83660000-d5bc-11eb-82bb-9e6c7ac3d888.png" width="500px" />
+</h1>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :rocket: Technologies
 
-### `yarn build`
+This project was developed with the following technologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [TypeScript][typescript]
+- [React][reactjs]
+- [Firebase][firebase]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧾 Layout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To access the layout use [Figma](https://www.figma.com/file/USAWkIbDFFNotFOPU3RvUO/Letmeask).
 
-### `yarn eject`
+## :information_source: How To Use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js][nodejs] + [Yarn][yarn] installed on your computer.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+From your command line:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Install Front-end
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone this repository
+$ git clone https://github.com/Gui-Devz/Letmeask.git
 
-## Learn More
+# Go into the repository
+$ cd NLW-1.0/frontent
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+$ yarn install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Run
+$ yarn start
+
+# running on port 3000
+```
+
+## ✍️ How to contribute
+
+- Make a fork;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit changes: `git commit -m 'feat: My new feature'`;
+- Make a push to your branch: `git push origin my-feature`.
+
+After merging your receipt request to done, you can delete a branch from yours.
+
+## :memo: License
+
+This project is under the MIT license.
+
+Made with ♥ by Guilherme Zagari :wave: [Get in touch!](https://www.linkedin.com/in/guilherme-batalha-2b913448/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[expo]: https://expo.io/
+[reactjs]: https://reactjs.org
+[rn]: https://facebook.github.io/react-native/
+[yarn]: https://yarnpkg.com/
+[firebase]: https://firebase.google.com/
