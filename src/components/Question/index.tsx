@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import './styles.scss';
 
+import {useTheme} from '../../hooks/useTheme'
+
 type QuestionProps = {
   author: {
     avatar: string;
@@ -20,10 +22,12 @@ export function Question({
   isHighlighted = false,
   children,
 }: QuestionProps){
+  const {theme} = useTheme();
+
   
   return (
-    <div className={`question ${isAnswered ? 'answered':''} ${isHighlighted ? 'highlighted': ''}`}>
-      <p>{content}</p>
+    <div className={`theme-${theme} question ${isAnswered ? 'answered':''} ${isHighlighted ? 'highlighted': ''}`}>
+      <p className={`theme-${theme}`}>{content}</p>
       <footer>
         <div className="user-info">
           <img src={author.avatar} alt={author.name} />

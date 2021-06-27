@@ -1,9 +1,18 @@
+:root {
+  --textareaInputBg: #2e2e2e;
+  --spanCodeColor: #fafafa;
+}
+
 .room-code {
   height: 40px;
   border-radius: 8px;
   overflow: hidden;
 
-  background: #fff;
+  background: #fefefe;
+  &.theme-dark {
+    background: var(--textareaInputBg);
+  }
+
   border: 1px solid #835afd;
   cursor: pointer;
 
@@ -22,6 +31,10 @@
   span {
     font-size: 14px;
     font-weight: bold;
+    color: #29292e;
+    &.theme-dark {
+      color: var(--spanCodeColor);
+    }
 
     display: block;
     align-self: center;

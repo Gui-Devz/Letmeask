@@ -1,3 +1,19 @@
+:root {
+  --themeBg: #212121;
+  --asideBg: #343a40;
+  --textPgColor: #fafafa;
+  --buttonAuthBg: #a8a8b3;
+  --buttonAuthColor: #171717;
+  --separatorColor: #424242;
+  --textareaInputBg: #2e2e2e;
+  --textareaInputColor: #e8f0f2;
+  --h1ContentColor: #fafafa;
+  --spanQuestionColor: #9e9e9e;
+  --spanCodeColor: #fafafa;
+  --buttonEndroomBg: #835afd;
+  --buttonEndroomColor: #f8f8f8;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +21,8 @@
 }
 
 body {
-  background: #f8f8f8;
-  color: #29292e;
+  background: var(--themeBg);
+  color: var(--textareaInputColor);
 }
 
 body,

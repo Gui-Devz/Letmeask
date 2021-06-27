@@ -3,10 +3,13 @@ import { useParams, useHistory } from "react-router-dom";
 import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
 import { Question } from "../components/Question";
+import { ButtonToggleTheme } from "../components/ButtonToggleTheme";
 
-import logoImg from "../assets/images/logo.svg";
+import {Logo} from "../components/Logo";
 
 import { useRoom } from "../hooks/useRoom";
+import {useTheme} from "../hooks/useTheme";
+
 
 import { database } from "../services/firebase";
 
@@ -23,7 +26,8 @@ export function AdminRoom(){
   const roomId = params.id;
   
   const {questions, title} = useRoom(roomId);
-
+  const {theme} = useTheme();
+  
   async function handleEndRoom(roomId: string){
     await database.ref(`rooms/${roomId}`).update({
       endedAt: new Date(),
@@ -66,9 +70,19 @@ export function AdminRoom(){
 
   return(
     <div id="page-room">
-      <header>
+      <header className={`theme-${theme}`}>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <div className="logo-toggle">
+            <div>
+              <Logo value={theme}/>
+            </div>
+            <div className="toggle-theme">
+              <div>
+                <ButtonToggleTheme/>
+              </div>
+              <p><span className={theme === "light" ? 'light':''}>Light</span><span className={theme === "dark" ? 'dark':''}>Dark</span></p>
+            </div>
+          </div>
           <span>
             <RoomCode code={params.id}/>
             <Button isOutlined onClick={()=> handleEndRoom(roomId)}>Encerrar sala</Button>
@@ -78,7 +92,7 @@ export function AdminRoom(){
 
       <main className="content">
         <div className="room-title">
-          <h1>Sala {title}</h1>
+          <h1 className={`theme-${theme}`}>Sala {title}</h1>
           { questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
         </div>
         

@@ -1,5 +1,26 @@
+:root {
+  --asideBg: #343a40;
+  --textPgColor: #fafafa;
+  --buttonAuthBg: #a8a8b3;
+  --buttonAuthColor: #171717;
+  --separatorColor: #424242;
+  --textareaInputBg: #2e2e2e;
+  --textareaInputColor: #e8f0f2;
+  --h1ContentColor: #fafafa;
+  --spanQuestionColor: #9e9e9e;
+  --spanCodeColor: #fafafa;
+  --buttonEndroomBg: #835afd;
+  --buttonEndroomColor: #f8f8f8;
+}
+
 .question {
   background: #fefefe;
+  color: #29292e;
+  &.theme-dark {
+    background: var(--textareaInputBg);
+    color: var(--textareaInputColor);
+  }
+
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
@@ -9,7 +30,7 @@
   }
 
   &.highlighted {
-    background: #f4f0ff;
+    background: var(--textareaInputBg);
     border: 1px solid #835afd;
 
     .highlighted-button {
@@ -22,7 +43,7 @@
     footer {
       .user-info,
       .user-info span {
-        color: #29292e;
+        color: #fafafa;
       }
     }
   }
@@ -46,6 +67,9 @@
 
   p {
     color: #29292e;
+    &.theme-dark {
+      color: var(--textPgColor);
+    }
   }
 
   footer {
@@ -68,6 +92,9 @@
         font-size: 14px;
         line-height: 16px;
         color: #737380;
+        &.theme-dark {
+          color: var(--spanQuestionColor);
+        }
       }
     }
 

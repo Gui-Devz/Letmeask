@@ -1,3 +1,8 @@
+:root {
+  --buttonEndroomBg: #835afd;
+  --buttonEndroomColor: #f8f8f8;
+}
+
 .button {
   height: 50px;
   border-radius: 8px;
@@ -23,13 +28,18 @@
     background: #f8f8f8;
     color: #835afd;
 
+    &.theme-dark {
+      background: var(--buttonEndroomBg);
+      color: var(--buttonEndroomColor);
+    }
+
     border: 1px solid #835afd;
   }
 
   &.outlined:not(:disabled):hover {
     background: #835afd;
     color: white;
-    filter: brightness(1);
+    filter: brightness(0.9);
 
     transition: 0.2s;
   }
