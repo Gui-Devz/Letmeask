@@ -40,7 +40,7 @@ So using this app you'll be able to connect with people asking them all your
 doubts about the game.
 
 <h1 align="center">
-    <img alt="Example" title="Example" src="https://user-images.githubusercontent.com/62578862/123531089-e7c9b200-d6d7-11eb-9b42-66fcccb102a3.JPG" width="500px" />
+    <img alt="Example" title="Example" src="https://user-images.githubusercontent.com/62578862/123531089-e7c9b200-d6d7-11eb-9b42-66fcccb102a3.JPG" width="1604" />
 </h1>
 
 ## :rocket: Technologies
