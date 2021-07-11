@@ -1,6 +1,6 @@
-import { ReactNode, useState, useEffect, createContext } from "react"
+import { ReactNode, useState, useEffect, createContext } from "react";
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 
 /* type Themes = {
   dark: object,
@@ -8,21 +8,21 @@ type Theme = 'light' | 'dark';
 } */
 
 type ThemeContextType = {
-  theme: Theme,
-  toggleTheme: () => void
-}
+  theme: Theme;
+  toggleTheme: () => void;
+};
 
 type ThemeContextProviderProps = {
-  children: ReactNode,
-}
+  children: ReactNode;
+};
 
-export const ThemeContext = createContext({} as ThemeContextType)
+export const ThemeContext = createContext({} as ThemeContextType);
 
-export function ThemeContextProvider(props: ThemeContextProviderProps){
-  const [theme, setTheme] = useState<Theme>(()=> {
-    const storagedTheme = localStorage.getItem('theme')
+export function ThemeContextProvider(props: ThemeContextProviderProps) {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const storagedTheme = localStorage.getItem("theme");
 
-    return (storagedTheme ?? 'light') as Theme;
+    return (storagedTheme ?? "light") as Theme;
   });
 
   /* const themes = {
@@ -59,7 +59,7 @@ export function ThemeContextProvider(props: ThemeContextProviderProps){
   } */
   //const [themeProperties, setThemeProperties] = useState(themes[theme])
 
- /*  function settingThemeProperties(){
+  /*  function settingThemeProperties(){
     const properties = Object.entries(themeProperties)
     properties.forEach(prop => {
       //document.documentElement.style.setProperty(prop[0], prop[1]);
@@ -67,38 +67,52 @@ export function ThemeContextProvider(props: ThemeContextProviderProps){
     })
   } */
 
-  function toggleTheme(){
+  function toggleTheme() {
     if (theme === "dark") {
-      setTheme('light');
+      setTheme("light");
       //setThemeProperties(themes.light)
-      document.getElementsByTagName('body')[0].style.setProperty("--themeBg", "#F8F8F8");
-      document.getElementsByTagName('body')[0].style.setProperty("--textareaInputColor", "#29292E");
-      
-    } else{
-      setTheme('dark');
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--themeBg", "#F8F8F8");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--textareaInputColor", "#29292E");
+    } else {
+      setTheme("dark");
       //setThemeProperties(themes.dark)
-      document.getElementsByTagName('body')[0].style.setProperty("--themeBg", "#171717");
-      document.getElementsByTagName('body')[0].style.setProperty("--textareaInputColor", "#e8f0f2");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--themeBg", "#171717");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--textareaInputColor", "#e8f0f2");
     }
-    
+
     //settingThemeProperties();
   }
 
-  useEffect(()=>{
-    localStorage.setItem('theme', theme);
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
     if (theme === "dark") {
-      document.getElementsByTagName('body')[0].style.setProperty("--themeBg", "#171717");
-      document.getElementsByTagName('body')[0].style.setProperty("--textareaInputColor", "#e8f0f2");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--themeBg", "#171717");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--textareaInputColor", "#e8f0f2");
     } else {
-      document.getElementsByTagName('body')[0].style.setProperty("--themeBg", "#F8F8F8");
-      document.getElementsByTagName('body')[0].style.setProperty("--textareaInputColor", "#29292E");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--themeBg", "#F8F8F8");
+      document
+        .getElementsByTagName("body")[0]
+        .style.setProperty("--textareaInputColor", "#29292E");
     }
-    
-  }, [theme])
+  }, [theme]);
 
-  return(
-    <ThemeContext.Provider value={{theme: theme, toggleTheme}}>
+  return (
+    <ThemeContext.Provider value={{ theme: theme, toggleTheme }}>
       {props.children}
     </ThemeContext.Provider>
-  )
+  );
 }
